@@ -1,4 +1,4 @@
 package gbittner.View;
-public class View {
+public class GrafikFrame {
     
 }
