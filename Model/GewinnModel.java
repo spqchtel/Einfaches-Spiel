@@ -1,4 +1,4 @@
-package gbittner.Model;
+package gbittner.model;
 import java.util.Random;
 
 public class GewinnModel {

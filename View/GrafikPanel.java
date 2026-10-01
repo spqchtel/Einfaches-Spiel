@@ -1,16 +1,15 @@
-package gbittner.View;
-import javax.swing.*;
+package gbittner.view;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.util.prefs.NodeChangeListener;
+import javax.swing.*;
 public class GrafikPanel extends JPanel {
     private final JButton nochmal;
     private final JLabel rundenErgebnis;
     private final JLabel gesamtPunkte;
     private final JTextField eingabe;
     private final JTextField computerPunkte;
-
-    public GrafikPanel() {
+    
+    public GrafikPanel(ActionListener c) {
         this.setLayout(new BorderLayout());
         JPanel northPanel = new JPanel();
         JPanel centerPanel = new JPanel();
@@ -45,20 +44,20 @@ public class GrafikPanel extends JPanel {
         southPanel.setLayout(new FlowLayout());
         southPanel.add(nochmal);
 
-        this.nochmal.addActionListener();
+        this.nochmal.addActionListener(c);
         this.nochmal.setActionCommand("btn");
-        this.eingabe.addActionListener(controller);
-        this.nochmal.setActionCommand("eingabe");
+        this.eingabe.addActionListener(c);
+        this.eingabe.setActionCommand("eingabe");
         
         this.add(northPanel, BorderLayout.NORTH);
         this.add(centerPanel, BorderLayout.CENTER);
         this.add(southPanel, BorderLayout.SOUTH);
     }
-    public void setEingabeEditable() {
-        this.eingabe.setEditable(true);
+    public void setEingabeEditable(boolean b) {
+        this.eingabe.setEditable(b);
     }
-    public void setNochmalEnabled() {
-        this.nochmal.setEnabled(true);
+    public void setNochmalEnabled(boolean b) {
+        this.nochmal.setEnabled(b);
     }
     public String getEingabeValue() {
         return this.eingabe.getText().trim();
@@ -70,14 +69,11 @@ public class GrafikPanel extends JPanel {
     public void setErgebnis(String rundenErgebnis) {
         this.rundenErgebnis.setText(rundenErgebnis);
     }   
-    public void setErgebnis(Color color) {
-        this.rundenErgebnis.setBackground(color);
-    }
     public void setGesamtPunkte(String gesamtPunkte) {
         this.gesamtPunkte.setText(gesamtPunkte);
     }
-    public void setcomputerPunkte(String ComputerPunkte) {
-        
+    public void setcomputerPunkte(String computerPunkte) {
+        this.computerPunkte.setText(computerPunkte);
     }
     
 }

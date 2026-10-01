@@ -1,11 +1,11 @@
-package gbittner.View;
+package gbittner.view;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 public class GrafikFrame extends JFrame {
     private final GrafikPanel panel;
     public GrafikFrame(ActionListener controller) {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        panel = new GrafikPanel();
+        panel = new GrafikPanel(controller);
         this.add(panel);
         this.setVisible(true);
         this.setSize(400,400);
