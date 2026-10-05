@@ -38,16 +38,19 @@ public class GewinnModel {
         return rundenErgebnis;
     }
     public void berechneErgebnis(int spielerZahl) {
+        berechneComputerZahl();
         if (spielerZahl == computerZahl) {
             gesamtpunkte += 20;
-            
+            rundenErgebnis = 20;
             return;
         }
         if(spielerZahl - 1 == computerZahl || spielerZahl + 1 == computerZahl) {
             gesamtpunkte += 10;
+            rundenErgebnis = 10;
             return;
         }
         gesamtpunkte -= 10;
+        rundenErgebnis = -10;
         
         
     }

@@ -8,7 +8,7 @@ public class GrafikFrame extends JFrame {
         panel = new GrafikPanel(controller);
         this.add(panel);
         this.setVisible(true);
-        this.setSize(400,400);
+        this.setSize(400,300);
     }
     public GrafikPanel getPanel() {
         return panel;

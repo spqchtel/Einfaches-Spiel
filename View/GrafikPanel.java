@@ -16,8 +16,8 @@ public class GrafikPanel extends JPanel {
         JPanel southPanel = new JPanel();
 
         northPanel.setLayout(new GridLayout(3,2,4,4));
-        northPanel.add(new JLabel("Rundenergbnis:",JLabel.CENTER));
-        northPanel.add(new JLabel("Gesamtpunkte:"),JLabel.CENTER);
+        northPanel.add(new JLabel("Gesamtpunkte:",JLabel.CENTER));
+        northPanel.add(new JLabel("Rundenergebnis:"),JLabel.CENTER);
         rundenErgebnis = new JLabel("Gib eine Zahl von 1-9 ein:",JLabel.CENTER);
         rundenErgebnis.setOpaque(true);
         rundenErgebnis.setBackground(new Color(255,255,255));
@@ -75,5 +75,12 @@ public class GrafikPanel extends JPanel {
     public void setcomputerPunkte(String computerPunkte) {
         this.computerPunkte.setText(computerPunkte);
     }
+    public void setRundenErgebnis(Color c) {
+        rundenErgebnis.setBackground(c);
+    } 
+    public void setGesamtPunkte(Color c) {
+        gesamtPunkte.setBackground(c);
+    }
+
     
 }
