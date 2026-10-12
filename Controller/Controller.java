@@ -60,7 +60,11 @@ public class Controller implements ActionListener {
             panel.setcomputerPunkte("");
             panel.setErgebnis("");
             panel.setEingabeValue("");
-
+            if(model.hatGewonnen() || model.hatVerloren()) {
+                model = new GewinnModel();
+                panel.setGesamtPunkte(new Color(255,255,255));
+                panel.setRundenErgebnis(new Color(255,255,255));
+            }
         }
     }
 
