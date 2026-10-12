@@ -60,7 +60,8 @@ public class Controller implements ActionListener {
             panel.setcomputerPunkte("");
             panel.setErgebnis("");
             panel.setEingabeValue("");
-
+            panel.setEingabeEditable(true);
+            panel.setNochmalEnabled(false);
         }
     }
 
